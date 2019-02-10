@@ -1,0 +1,44 @@
+// COLOR VARIABLES
+$green: #16f58d;
+$primary: #eb4c0d;
+$text-light: rgb(163, 162, 162);
+$text-dark: rgb(31, 30, 30);
+
+$color-secondary: #101d2c;
+$white: #fff;
+$color-black: #101d2b;
+
+// FONT 
+$font-primary: 'Nunito', sans-serif;
+
+//  BREAKPOINTS
+$bp-largest: 75em;   
+$bp-large: 62.5em;  
+$bp-medium: 55em;   
+$bp-small: 37.5em;   
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; 
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: $font-primary;
+    font-size: 1.2rem;
+    @media only screen and (max-width: $bp-small) {
+        padding: 0;
+    }
+}
+
+
+

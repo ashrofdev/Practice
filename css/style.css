@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.2rem; }
+  @media only screen and (max-width: 37.5em) {
+    body {
+      padding: 0; } }
+
+@keyframes hire {
+  0% {
+    opacity: .5; }
+  50% {
+    opacity: 1;
+    color: #ff8800;
+    border: 1px solid #ff8800; }
+  50% {
+    opacity: 1;
+    color: red;
+    border: 1px solid red; }
+  100% {
+    opacity: 1;
+    color: #ffee00;
+    border: 1px solid #ffee00; } }
+
+.head {
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.623), rgba(0, 0, 0, 0.685)), url(../img/workwithus.jpg);
+  background-size: cover;
+  height: 100vh; }
+  .head .text {
+    text-align: center;
+    padding-top: 8rem;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.815), rgba(0, 0, 0, 0.767)); }
+    .head .text .heading {
+      font-weight: 500;
+      font-size: 5rem;
+      margin-bottom: 1rem;
+      color: #fff; }
+    .head .text .paragraph {
+      font-size: 1.4rem;
+      margin-bottom: 2.5rem;
+      color: #fff;
+      padding: 0 40rem; }
+    .head .text .link2 {
+      text-decoration: none;
+      color: #fff;
+      border: 1.5px solid #fff;
+      padding: .5rem 1rem;
+      font-size: 1.5rem;
+      margin-right: 1rem;
+      background-color: #eb4c0d; }
+    .head .text .link {
+      text-decoration: none;
+      color: #fff;
+      border: 1.5px solid #fff;
+      padding: .5rem 1rem;
+      font-size: 1.5rem;
+      margin-right: 1rem;
+      transition: all .5s; }
+      .head .text .link:hover {
+        background-color: #eb4c0d; }
+  .head .buttom {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.795) 30%, rgba(245, 87, 87, 0.048) 55%); }
+    .head .buttom .navigation {
+      background-color: transparent; }
+      .head .buttom .navigation ul li {
+        list-style: none;
+        transition: all .5s;
+        padding: 2rem; }
+        .head .buttom .navigation ul li:hover {
+          background-color: #eb4c0d; }
+        .head .buttom .navigation ul li a {
+          text-decoration: none;
+          color: #fff;
+          font-size: 1.5rem; }
+      .head .buttom .navigation ul .home {
+        border-top: 3px solid #eb4c0d; }
+
+.features {
+  padding: 3rem 0; }
+  .features .heading {
+    text-align: center;
+    font-size: 3rem;
+    color: #1f1e1e; }
+  .features .para {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #a3a2a2; }
+  .features .feature {
+    padding: 1rem;
+    text-align: center;
+    background-color: #f0eeee;
+    border-radius: 2px;
+    box-shadow: 0 0.5rem 1rem rgba(73, 73, 73, 0.712);
+    transition: all .5s; }
+    .features .feature:hover {
+      transform: scale(1.1) rotate(5deg); }
+    .features .feature .heading {
+      font-size: 2rem;
+      color: #1f1e1e;
+      margin-bottom: 1rem; }
+    .features .feature .paragraph {
+      font-size: 1.5rem;
+      color: #a3a2a2; }
+
+.hire {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.712), rgba(0, 0, 0, 0.747)), url(../img/counter.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 5rem;
+  text-align: center; }
+  .hire .heading {
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 2rem; }
+    .hire .heading span {
+      color: #eb4c0d; }
+  .hire .link {
+    animation: hire 1s alternate infinite;
+    text-decoration: none;
+    color: #eb4c0d;
+    padding: 1rem 1.5rem;
+    border: 1px solid #eb4c0d;
+    font-size: 1.4rem;
+    transition: all .5s; }
+    .hire .link:hover {
+      background-color: #eb4c0d;
+      color: #fff; }
+
+.team .content2 {
+  padding: 5rem 0; }
+  .team .content2 .card {
+    position: relative; }
+    .team .content2 .card:hover .front {
+      transform: rotateY(-180deg); }
+    .team .content2 .card:hover .back {
+      transform: rotateY(0); }
+    .team .content2 .card .front {
+      background-color: #1f1e1e;
+      color: white;
+      transition: all 1s;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      backface-visibility: hidden;
+      text-align: center; }
+    .team .content2 .card .back {
+      background-color: blue;
+      color: white;
+      transition: all 1s;
+      transform: rotateY(180deg);
+      position: absolute;
+      top: 0;
+      left: 0;
+      backface-visibility: hidden;
+      width: 100%; }
+
+.container {
+  display: grid;
+  grid-template-columns: [full-start] 1fr [middle-start] repeat(7, 14rem) [middle-end] 1fr [full-end]; }
+  .container .head {
+    grid-column: full-start / full-end;
+    display: grid;
+    grid-template-columns: 1fr; }
+    .container .head .buttom {
+      display: grid;
+      grid-template-columns: [full-start] 1fr [middle-start] repeat(7, 14rem) [middle-end] 1fr [full-end];
+      grid-template-rows: min-content;
+      height: 30%;
+      color: #fff; }
+      .container .head .buttom .logo {
+        grid-column: middle-start / 4; }
+      .container .head .buttom .navigation {
+        grid-column: 6 / middle-end;
+        align-self: center; }
+        .container .head .buttom .navigation ul {
+          display: flex;
+          justify-content: space-between; }
+  .container .about {
+    grid-column: middle-start / middle-end;
+    padding: 3rem 0 5rem 0;
+    display: grid;
+    grid-template-columns: 20rem 1fr 20rem;
+    grid-gap: 2rem; }
+    .container .about .image {
+      width: 100%;
+      height: 100%;
+      overflow: hidden; }
+    .container .about .heading {
+      grid-column: 1 / -1;
+      justify-self: center;
+      font-size: 3rem;
+      color: #1f1e1e; }
+    .container .about .photo {
+      grid-column: 1 / 2; }
+    .container .about .phot {
+      grid-column: 3 / 4; }
+    .container .about .paragraph {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      font-size: 1.5rem;
+      color: #a3a2a2; }
+    .container .about .link {
+      justify-self: center;
+      text-decoration: none;
+      color: #fff;
+      background-color: #ff5e00;
+      padding: 1.2rem;
+      font-size: 1.5rem;
+      grid-column: 3 / 4;
+      border-radius: 3px;
+      transition: all .5s; }
+      .container .about .link:hover {
+        background-color: #27201d; }
+    .container .about .para {
+      grid-column: 2 / 3;
+      align-self: center;
+      font-size: 2rem;
+      font-weight: 600;
+      justify-self: flex-end; }
+  .container .features {
+    grid-column: middle-start / middle-end; }
+    .container .features .content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, max-content);
+      justify-content: space-between;
+      grid-gap: 3rem;
+      margin-top: 4rem; }
+  .container .hire {
+    grid-column: full-start / full-end;
+    background-color: black; }
+  .container .team {
+    grid-column: middle-start / middle-end; }
+    .container .team .content2 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: space-between;
+      grid-gap: 3rem; }
+  .container .partner {
+    grid-column: full-start / full-end;
+    background-color: blue; }
+  .container .footer {
+    grid-column: full-start / full-end;
+    background-color: black; }

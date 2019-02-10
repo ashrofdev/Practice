@@ -1,0 +1,132 @@
+.container {
+    display: grid;
+    grid-template-columns: [full-start] 1fr [middle-start] repeat(7, 14rem) [middle-end] 1fr [full-end];
+
+    .head {
+        grid-column: full-start / full-end;
+    
+        display: grid;
+        grid-template-columns: 1fr;
+    
+        &  .buttom {
+            display: grid;
+            grid-template-columns: [full-start] 1fr [middle-start] repeat(7, 14rem) [middle-end] 1fr [full-end];
+            grid-template-rows: min-content;
+            height: 30%;
+            color: $white;
+    
+            &  .logo {
+                grid-column: middle-start / 4;
+            }
+    
+            &  .navigation {
+                grid-column: 6 / middle-end;
+                align-self: center;
+               
+                &  ul {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+       
+    }
+    
+    .about {
+        grid-column: middle-start / middle-end;
+        padding: 3rem 0 5rem 0;
+
+        display: grid;
+        grid-template-columns: 20rem 1fr 20rem;
+        grid-gap: 2rem;
+
+        &  .image {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        &  .heading {
+            grid-column: 1 / -1;
+            justify-self: center;
+            font-size: 3rem;
+            color: $text-dark;
+        }
+        &  .photo{
+            grid-column: 1 / 2;
+        }
+        &  .phot {
+            grid-column: 3 / 4;
+        }
+        &  .paragraph {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+            font-size: 1.5rem;
+            color: $text-light;
+        }
+
+        &  .link {
+            justify-self: center;
+            text-decoration: none;
+            color: $white;
+            background-color: rgb(255, 94, 0);
+            padding: 1.2rem;
+            font-size: 1.5rem;
+            grid-column: 3 / 4;
+            border-radius: 3px;
+            transition: all .5s;
+
+            &:hover {
+                background-color: rgb(39, 32, 29);
+            }
+        }
+        &  .para {
+            grid-column: 2 / 3;
+            align-self: center;
+            font-size: 2rem;
+            font-weight: 600;
+            justify-self: flex-end;
+        }
+    }
+    .features {
+        grid-column: middle-start / middle-end;
+
+        &  .content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, max-content);
+            justify-content: space-between;
+            grid-gap: 3rem;
+            margin-top: 4rem;
+
+           
+        }
+    }
+    .hire {
+        grid-column: full-start / full-end;
+        background-color: black;
+    }
+    
+    .team {
+        grid-column: middle-start / middle-end;
+
+        &  .content2 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: space-between;
+            grid-gap: 3rem;
+        }
+    }
+    
+    .partner {
+        grid-column: full-start / full-end;
+        background-color: blue;
+    }
+    
+    .footer {
+        grid-column: full-start / full-end;
+        background-color: black;
+    }
+    
+    
+}
+

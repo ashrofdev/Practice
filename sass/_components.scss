@@ -1,0 +1,218 @@
+@keyframes hire {
+    0% {
+        opacity: .5;
+    }
+    50% {
+        opacity: 1;
+        color: rgb(255, 136, 0);
+        border: 1px solid rgb(255, 136, 0);
+    }
+    50% {
+        opacity: 1;
+        color: rgb(255, 0, 0);
+        border: 1px solid rgb(255, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        color: rgb(255, 238, 0);
+        border: 1px solid rgb(255, 238, 0);
+    }
+}
+
+.head {
+    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.623), rgba(0, 0, 0, 0.685)), url(../img/workwithus.jpg);
+    background-size: cover;
+    height: 100vh;
+
+    &  .text {
+        text-align: center;
+        padding-top: 8rem;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.815), rgba(0, 0, 0, 0.767));
+
+        &  .heading {
+            font-weight: 500;
+            font-size: 5rem;
+            margin-bottom: 1rem;
+            color: $white;
+        }
+        &  .paragraph {
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
+            color: $white;
+            padding: 0 40rem;
+        }
+        &  .link2 {
+            text-decoration: none;
+            color: $white;
+            border: 1.5px solid $white;
+            padding: .5rem 1rem;
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            background-color: $primary;
+        }
+        &  .link {
+            text-decoration: none;
+            color: $white;
+            border: 1.5px solid $white;
+            padding: .5rem 1rem;
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            transition: all .5s;
+
+           
+
+            &:hover {
+                background-color: $primary;
+            }
+        }
+    }
+
+    &  .buttom {
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.795) 30%,  rgba(245, 87, 87, 0.048) 55%);
+        
+        &  .navigation {
+            background-color: transparent;
+
+            &  ul {
+
+                &  li {
+                    list-style: none;
+                    transition: all .5s;
+
+                    &:hover {
+                        background-color: $primary;
+                    }
+                    padding: 2rem;
+
+                    &  a {
+                        text-decoration: none;
+                        color: $white;
+                        font-size: 1.5rem;
+                       
+                    }
+                }
+                &  .home {
+                    border-top: 3px solid $primary;
+                }
+            }
+        }
+    
+    }
+}
+
+.features {
+    padding: 3rem 0;
+
+    &  .heading {
+        text-align: center;
+        font-size: 3rem;
+        color: $text-dark;
+    }
+    &  .para {
+        text-align: center;
+        font-size: 1.5rem;
+        color: $text-light;
+    }
+    &  .feature {
+        padding: 1rem;
+        text-align: center;
+        background-color: rgb(240, 238, 238);
+        border-radius: 2px;
+        box-shadow: 0 .5rem 1rem rgba(73, 73, 73, 0.712);
+        transition: all .5s;
+
+        &:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        &  .heading {
+            font-size: 2rem;
+            color: $text-dark;
+            margin-bottom: 1rem
+        }
+        &  .paragraph {
+            font-size: 1.5rem;
+            color: $text-light;
+        }
+    }
+}
+
+.hire {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.712), rgba(0, 0, 0, 0.747)), url(../img/counter.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 5rem;
+    text-align: center;
+
+    &  .heading {
+        color: $white;
+        font-size: 4rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+
+        &  span {
+            color: $primary;
+        }
+    }
+    &  .link {
+        animation: hire 1s alternate infinite;
+        text-decoration: none;
+        color: $primary;
+        padding: 1rem 1.5rem;
+        border: 1px solid $primary;
+        font-size: 1.4rem;
+        transition: all .5s;
+
+
+        &:hover {
+            background-color: $primary;
+            color: $white;
+        }
+       
+    }
+}
+
+.team {
+    &  .content2 {
+        padding: 5rem 0;
+
+        &  .card {
+            position: relative;
+            
+            &:hover .front {
+                transform: rotateY(-180deg);
+            }
+            &:hover .back {
+                transform: rotateY(0);
+            }
+
+            &  .front {
+                background-color: $text-dark;
+                color: white;
+                transition: all 1s;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                backface-visibility: hidden;
+                text-align: center;
+
+                &  .name {
+                }
+            }
+            &  .back {
+                background-color: blue;
+                color: white;
+                transition: all 1s;
+                transform: rotateY(180deg);
+                position: absolute;
+                top: 0;
+                left: 0;
+                backface-visibility: hidden;
+                width: 100%;
+                
+            }
+        }
+    }
+}
