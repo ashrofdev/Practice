@@ -1,10 +1,12 @@
 {
-  "name": "natours",
+  "name": "pracctice",
   "version": "1.0.0",
-  "description": "Landing page for Natours",
+  "description": "Landing page for practice",
   "main": "index.js",
   "scripts": {
-   "compile:sass": "node-sass sass/main.scss css/style.css -w"
+   "compile:sass": "node-sass sass/main.scss css/style.css -w",
+   
+   "start": "live-server"
   },
   "author": "Ashraf",
   "license": "ISC",
