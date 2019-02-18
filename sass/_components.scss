@@ -18,19 +18,20 @@
         border: 1px solid rgb(255, 238, 0);
     }
 }
-@keyframes spans {
+@keyframes head {
     0% {
-        opacity: 1;
+        background-color: black;
     }
    
     100% {
-        opacity: 1;
-        color: $primary;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.815), rgba(0, 0, 0, 0.897)),  url(../img/workwithus.jpg);
     }
 }
 
+
 .head {
-    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.623), rgba(0, 0, 0, 0.685)), url(../img/workwithus.jpg);
+    animation: head 2s;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.815), rgba(0, 0, 0, 0.897)),  url(../img/workwithus.jpg);
     background-size: cover;
     height: 100vh;
 
@@ -43,18 +44,19 @@
 
     &  .text {
         text-align: center;
-        padding-top: 8rem;
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.815), rgba(0, 0, 0, 0.767));
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.795) 30%,  rgba(245, 87, 87, 0.048) 55%);
+        padding-top: 10rem;
+
 
         &  .heading {
             font-weight: 500;
-            font-size: 5rem;
-            margin-bottom: 1rem;
+            font-size: 7rem;
+            margin-bottom: 2rem;
             color: $white;
         }
         &  .paragraph {
-            font-size: 1.4rem;
-            margin-bottom: 2.5rem;
+            font-size: 1.7rem;
+            margin-bottom: 3rem;
             color: $white;
             padding: 0 40rem;
 
@@ -65,20 +67,32 @@
                 padding: 0 2rem;
             }
         }
+        transition: all 2s;
+        
+        &:hover .link2 {
+            background-color: $primary;
+        }
+         
+        &:hover .link {
+            background-color: $primary;
+        }
+
         &  .link2 {
             text-decoration: none;
             color: $white;
             border: 1.5px solid $white;
-            padding: .5rem 1rem;
+            padding: 1rem 2rem;
             font-size: 1.5rem;
             margin-right: 1rem;
-            background-color: $primary;
+            &:hover {
+                background-color: rgb(248, 46, 46);
+            }
         }
         &  .link {
             text-decoration: none;
             color: $white;
             border: 1.5px solid $white;
-            padding: .5rem 1rem;
+            padding: 1rem 2rem;
             font-size: 1.5rem;
             margin-right: 1rem;
             transition: all .5s;
@@ -86,14 +100,16 @@
            
 
             &:hover {
-                background-color: $primary;
+                background-color: rgb(248, 46, 46);
             }
+            
         }
     }
 
     &  .buttom {
         background-image: linear-gradient(to right, rgba(0, 0, 0, 0.795) 30%,  rgba(245, 87, 87, 0.048) 55%);
         
+
         &  .navigation {
             background-color: transparent;
 
@@ -107,6 +123,9 @@
                         background-color: $primary;
                     }
                     padding: 2rem;
+                    @media only screen and (max-width: $bp-medium) {
+                        margin-right: 0;
+                    }
 
                     &  a {
                         text-decoration: none;
