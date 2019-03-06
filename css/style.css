@@ -37,11 +37,11 @@ body {
   0% {
     background-color: black; }
   100% {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.815), rgba(0, 0, 0, 0.897)), url(../img/workwithus.jpg); } }
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.932), rgba(0, 0, 0, 0.897)), url(../img/workwithus.jpg); } }
 
 .head {
   animation: head 2s;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.815), rgba(0, 0, 0, 0.897)), url(../img/workwithus.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.973), rgba(0, 0, 0, 0.897)), url(../img/workwithus.jpg);
   background-size: cover;
   height: 100vh; }
   @media screen and (max-width: 55em) {
@@ -50,9 +50,47 @@ body {
   @media only screen and (max-width: 37.5em) {
     .head {
       height: 95vh; } }
+  .head #position {
+    color: #fff;
+    font-size: 1.2rem;
+    margin: auto;
+    width: 30vw;
+    margin-top: 0; }
+    .head #position p {
+      padding: .2rem 2rem;
+      background-color: #af052a;
+      border-bottom: 1px solid black; }
+      .head #position p:hover {
+        background-color: rgba(230, 20, 55, 0.212); }
+  .head .seperate {
+    text-align: center;
+    margin-bottom: 0; }
+    .head .seperate .search {
+      background-color: rgba(0, 0, 0, 0.185);
+      border: 3px solid #ff0040;
+      border-radius: 2rem;
+      width: 42vw;
+      margin: auto;
+      height: 4rem;
+      padding: 2rem;
+      color: #fff;
+      margin-bottom: 0;
+      margin-top: 1rem;
+      transition: all .5s; }
+      .head .seperate .search:focus {
+        width: 45vw;
+        background-color: rgba(241, 238, 238, 0.185);
+        border: 3px solid #ff0062; }
+    .head .seperate .button {
+      height: 1fr;
+      background-color: #ff0040;
+      border: none;
+      border-radius: 5rem;
+      margin-left: -5rem;
+      padding: 1.5rem;
+      color: #fff; }
   .head .text {
     text-align: center;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.795) 30%, rgba(245, 87, 87, 0.048) 55%);
     padding-top: 10rem;
     transition: all 2s; }
     .head .text .heading {
@@ -153,6 +191,9 @@ body {
   background-position: center;
   padding: 5rem;
   text-align: center; }
+  .hire p {
+    color: #fff;
+    font-size: 3rem; }
   .hire .heading {
     color: #fff;
     font-size: 4rem;
@@ -169,11 +210,39 @@ body {
     padding: 1rem 2rem;
     border: 1px solid #af052a;
     font-size: 1.6rem;
+    background-color: transparent;
+    margin-bottom: 2rem;
     transition: all .5s; }
     .hire .link:hover {
       background-color: #af052a;
       color: black;
       animation: none; }
+    .hire .link:active {
+      transform: scale(0.01); }
+  .hire .position {
+    color: #fff;
+    padding: 1.5rem; }
+    .hire .position p {
+      color: #fff;
+      text-transform: uppercase; }
+  .hire #hope input {
+    padding: .5rem;
+    background-color: rgba(255, 255, 255, 0.623);
+    color: rgba(253, 183, 183, 0.548);
+    font-weight: 700;
+    margin-bottom: 2rem;
+    transition: all .5s; }
+    .hire #hope input:focus {
+      background-color: rgba(255, 255, 255, 0.048);
+      padding-right: 2rem; }
+    .hire #hope input:hover {
+      border-color: rgba(247, 110, 110, 0.938); }
+  .hire #hope button {
+    background-color: #af052a;
+    padding: .5rem 1rem; }
+    .hire #hope button:hover {
+      border-color: rgba(247, 110, 110, 0.938);
+      background-color: rgba(172, 13, 13, 0.938); }
 
 .team {
   padding: 5rem 0;
